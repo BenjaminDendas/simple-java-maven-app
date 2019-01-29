@@ -1,12 +1,10 @@
-pipeline {
-    agent any
-    tools {
-    maven 'apache-maven-3.0.1'
-    }
-    stages {
+Jenkinsfile (Declarative Pipeline)
+pipeline { 
+    agent any  
+    stages { 
         stage('Build') { 
-            steps {
-                sh 'mvn -B -DskipTests clean package' 
+            steps { 
+               echo 'This is a minimal pipeline.' 
             }
         }
     }
